@@ -10,13 +10,13 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Add New Book</h6>
-              <a href="{{ route('books.index') }}" class="btn btn-secondary btn-sm">
+              <a href="{{ route('admin.books.index') }}" class="btn btn-secondary btn-sm">
                 <i class="fa fa-arrow-left"></i> Back to Books
               </a>
             </div>
           </div>
           <div class="card-body">
-            <form action="{{ route('books.store') }}" method="POST">
+            <form action="{{ route('admin.books.store') }}" method="POST">
               @csrf
               
               <div class="row">
@@ -89,7 +89,7 @@
                     <button type="submit" class="btn btn-primary">
                       <i class="fa fa-save"></i> Create Book
                     </button>
-                    <a href="{{ route('books.index') }}" class="btn btn-secondary ms-2">
+                    <a href="{{ route('admin.books.index') }}" class="btn btn-secondary ms-2">
                       <i class="fa fa-times"></i> Cancel
                     </a>
                   </div>

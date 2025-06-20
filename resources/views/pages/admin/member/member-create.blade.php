@@ -10,7 +10,7 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Add New Member</h6>
-              <a href="{{ route('members.index') }}" class="btn btn-secondary btn-sm">
+              <a href="{{ route('admin.members.index') }}" class="btn btn-secondary btn-sm">
                 <i class="fa fa-arrow-left"></i> Back to Members
               </a>
             </div>
@@ -21,7 +21,7 @@
                 <strong>No Available Users!</strong> All existing users are already members. You need to create new users first before adding them as members.
               </div>
             @else
-              <form action="{{ route('members.store') }}" method="POST">
+              <form action="{{ route('admin.members.store') }}" method="POST">
                 @csrf
                 
                 <div class="row">
@@ -66,7 +66,7 @@
                       <button type="submit" class="btn btn-primary">
                         <i class="fa fa-save"></i> Create Member
                       </button>
-                      <a href="{{ route('members.index') }}" class="btn btn-secondary ms-2">
+                      <a href="{{ route('admin.members.index') }}" class="btn btn-secondary ms-2">
                         <i class="fa fa-times"></i> Cancel
                       </a>
                     </div>

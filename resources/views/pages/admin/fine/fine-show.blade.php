@@ -9,10 +9,10 @@
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                         <h6>Fine Details #{{ $fine->id }}</h6>
                         <div>
-                            <a href="{{ route('fines.edit', $fine) }}" class="btn btn-warning btn-sm me-2">
+                            <a href="{{ route('admin.fines.edit', $fine) }}" class="btn btn-warning btn-sm me-2">
                                 <i class="fas fa-edit"></i> Edit
                             </a>
-                            <a href="{{ route('fines.index') }}" class="btn btn-secondary btn-sm">
+                            <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary btn-sm">
                                 <i class="fas fa-arrow-left"></i> Back to List
                             </a>
                         </div>
@@ -78,7 +78,7 @@
                                                 <strong>Reservation ID:</strong>
                                             </div>
                                             <div class="col-8">
-                                                <a href="{{ route('reservations.show', $fine->reservation) }}" class="text-primary">
+                                                <a href="{{ route('admin.reservations.show', $fine->reservation) }}" class="text-primary">
                                                     #{{ $fine->reserve_id }}
                                                 </a>
                                             </div>
@@ -233,13 +233,13 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <a href="{{ route('fines.edit', $fine) }}" class="btn btn-warning">
+                                        <a href="{{ route('admin.fines.edit', $fine) }}" class="btn btn-warning">
                                             <i class="fas fa-edit"></i> Edit Fine
                                         </a>
-                                        <a href="{{ route('reservations.show', $fine->reservation) }}" class="btn btn-info ms-2">
+                                        <a href="{{ route('admin.reservations.show', $fine->reservation) }}" class="btn btn-info ms-2">
                                             <i class="fas fa-book"></i> View Reservation
                                         </a>
-                                        <a href="{{ route('fines.index') }}" class="btn btn-secondary ms-2">
+                                        <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary ms-2">
                                             <i class="fas fa-list"></i> All Fines
                                         </a>
                                     </div>
@@ -249,7 +249,7 @@
                                                 <i class="fas fa-check"></i> Mark as Paid
                                             </button>
                                         @endif
-                                        <form action="{{ route('fines.destroy', $fine) }}" 
+                                        <form action="{{ route('admin.fines.destroy', $fine) }}" 
                                               method="POST" 
                                               style="display: inline-block;"
                                               onsubmit="return confirm('Are you sure you want to delete this fine? This action cannot be undone.')">

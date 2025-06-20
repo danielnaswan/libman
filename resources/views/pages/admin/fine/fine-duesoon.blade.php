@@ -13,10 +13,10 @@
                                 <p class="text-sm mb-0">Fines due within the next 7 days</p>
                             </div>
                             <div>
-                                <a href="{{ route('fines.overdue') }}" class="btn btn-danger btn-sm me-2">
+                                <a href="{{ route('admin.fines.overdue') }}" class="btn btn-danger btn-sm me-2">
                                     <i class="fas fa-exclamation-triangle"></i> Overdue
                                 </a>
-                                <a href="{{ route('fines.index') }}" class="btn btn-secondary btn-sm">
+                                <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-arrow-left"></i> All Fines
                                 </a>
                             </div>
@@ -98,10 +98,10 @@
                                             </td>
                                             <td class="align-middle text-center">
                                                 <div class="d-flex justify-content-center gap-2">
-                                                    <a href="{{ route('fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
+                                                    <a href="{{ route('admin.fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
-                                                    <a href="{{ route('fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
+                                                    <a href="{{ route('admin.fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                     <button class="text-primary border-0 bg-transparent p-0"
@@ -240,7 +240,7 @@
                                     <button class="btn btn-info me-2" onclick="exportDueSoon()">
                                         <i class="fas fa-download"></i> Export List
                                     </button>
-                                    <a href="{{ route('fines.create') }}" class="btn btn-success">
+                                    <a href="{{ route('admin.fines.create') }}" class="btn btn-success">
                                         <i class="fas fa-plus"></i> Add New Fine
                                     </a>
                                 </div>

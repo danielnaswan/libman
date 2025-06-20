@@ -43,7 +43,7 @@ class SessionsController extends Controller
             }
             
             session()->regenerate();
-            return redirect('dashboard')->with(['success' => 'You are logged in.']);
+            return redirect('/')->with(['success' => 'You are logged in.']);
         } else {
             return back()->withErrors(['email' => 'Email or password invalid.']);
         }
@@ -81,7 +81,7 @@ class SessionsController extends Controller
             session()->forget('2fa_user_id');
             session()->regenerate();
             
-            return redirect('dashboard')->with(['success' => 'You are logged in.']);
+            return redirect('/')->with(['success' => 'You are logged in.']);
         } else {
             return back()->withErrors(['code' => 'Invalid 2FA code. Please try again.']);
         }
@@ -92,7 +92,7 @@ class SessionsController extends Controller
         $user = Auth::user();
         
         if ($user->google2fa_secret) {
-            return redirect('dashboard')->with(['info' => '2FA is already enabled for your account.']);
+            return redirect('/')->with(['info' => '2FA is already enabled for your account.']);
         }
 
         $secret = $this->google2fa->generateSecretKey();
@@ -127,7 +127,7 @@ class SessionsController extends Controller
             $user->google2fa_secret = $request->secret;
             $user->save();
 
-            return redirect('dashboard')->with(['success' => '2FA has been enabled successfully!']);
+            return redirect('/')->with(['success' => '2FA has been enabled successfully!']);
         } else {
             return back()->withErrors(['code' => 'Invalid 2FA code. Please try again.']);
         }
@@ -154,7 +154,7 @@ class SessionsController extends Controller
             $user->google2fa_secret = null;
             $user->save();
 
-            return redirect('dashboard')->with(['success' => '2FA has been disabled successfully!']);
+            return redirect('/')->with(['success' => '2FA has been disabled successfully!']);
         } else {
             return back()->withErrors(['code' => 'Invalid 2FA code. Please try again.']);
         }

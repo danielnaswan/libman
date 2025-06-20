@@ -9,16 +9,16 @@
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                         <h6>Edit Reservation #{{ $reservation->id }}</h6>
                         <div>
-                            <a href="{{ route('reservations.show', $reservation) }}" class="btn btn-info btn-sm me-2">
+                            <a href="{{ route('admin.reservations.show', $reservation) }}" class="btn btn-info btn-sm me-2">
                                 <i class="fas fa-eye"></i> View
                             </a>
-                            <a href="{{ route('reservations.index') }}" class="btn btn-secondary btn-sm">
+                            <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary btn-sm">
                                 <i class="fas fa-arrow-left"></i> Back to List
                             </a>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('reservations.update', $reservation) }}" method="POST">
+                        <form action="{{ route('admin.reservations.update', $reservation) }}" method="POST">
                             @csrf
                             @method('PUT')
                             
@@ -103,10 +103,10 @@
                                         <button type="submit" class="btn btn-primary">
                                             <i class="fas fa-save"></i> Update Reservation
                                         </button>
-                                        <a href="{{ route('reservations.show', $reservation) }}" class="btn btn-info ms-2">
+                                        <a href="{{ route('admin.reservations.show', $reservation) }}" class="btn btn-info ms-2">
                                             <i class="fas fa-eye"></i> View
                                         </a>
-                                        <a href="{{ route('reservations.index') }}" class="btn btn-secondary ms-2">
+                                        <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary ms-2">
                                             Cancel
                                         </a>
                                     </div>

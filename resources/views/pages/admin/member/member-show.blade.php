@@ -11,10 +11,10 @@
             <div class="d-flex justify-content-between align-items-center">
               <h6>Member Details</h6>
               <div>
-                <a href="{{ route('members.edit', $member) }}" class="btn btn-primary btn-sm me-2">
+                <a href="{{ route('admin.members.edit', $member) }}" class="btn btn-primary btn-sm me-2">
                   <i class="fa fa-edit"></i> Edit Member
                 </a>
-                <a href="{{ route('members.index') }}" class="btn btn-secondary btn-sm">
+                <a href="{{ route('admin.members.index') }}" class="btn btn-secondary btn-sm">
                   <i class="fa fa-arrow-left"></i> Back to Members
                 </a>
               </div>
@@ -154,10 +154,10 @@
                     <hr class="my-3">
                     
                     <div class="d-flex justify-content-between">
-                      <a href="{{ route('members.edit', $member) }}" class="btn btn-outline-primary btn-sm">
+                      <a href="{{ route('admin.members.edit', $member) }}" class="btn btn-outline-primary btn-sm">
                         <i class="fa fa-edit"></i> Edit
                       </a>
-                      <form action="{{ route('members.destroy', $member) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this member?')">
+                      <form action="{{ route('admin.members.destroy', $member) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this member?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-outline-danger btn-sm">

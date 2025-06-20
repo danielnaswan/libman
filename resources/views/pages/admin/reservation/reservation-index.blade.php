@@ -9,7 +9,7 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Reservations Management</h6>
-              <a href="{{ route('reservations.create') }}" class="btn btn-primary btn-sm">
+              <a href="{{ route('admin.reservations.create') }}" class="btn btn-primary btn-sm">
                 <i class="fa fa-plus"></i> Add New Reservation
               </a>
             </div>
@@ -68,13 +68,13 @@
                     </td>
                     <td class="align-middle text-center">
                       <div class="d-flex justify-content-center gap-2">
-                        <a href="{{ route('reservations.show', $reservation) }}" class="text-info me-2" data-toggle="tooltip" title="View">
+                        <a href="{{ route('admin.reservations.show', $reservation) }}" class="text-info me-2" data-toggle="tooltip" title="View">
                           <i class="fa fa-eye"></i>
                         </a>
-                        <a href="{{ route('reservations.edit', $reservation) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
+                        <a href="{{ route('admin.reservations.edit', $reservation) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <form action="{{ route('reservations.destroy', $reservation) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this reservation?')">
+                        <form action="{{ route('admin.reservations.destroy', $reservation) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this reservation?')">
                           @csrf
                           @method('DELETE')
                           <button type="submit" class="text-danger border-0 bg-transparent p-0" data-toggle="tooltip" title="Delete">
@@ -90,7 +90,7 @@
                       <div class="text-secondary">
                         <i class="fa fa-book fa-3x mb-3 opacity-6"></i>
                         <p class="mb-0">No reservations found</p>
-                        <a href="{{ route('reservations.create') }}" class="btn btn-primary btn-sm mt-2">Create Your First Reservation</a>
+                        <a href="{{ route('admin.reservations.create') }}" class="btn btn-primary btn-sm mt-2">Create Your First Reservation</a>
                       </div>
                     </td>
                   </tr>

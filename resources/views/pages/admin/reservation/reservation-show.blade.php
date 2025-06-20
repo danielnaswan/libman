@@ -9,10 +9,10 @@
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                         <h6>Reservation Details #{{ $reservation->id }}</h6>
                         <div>
-                            <a href="{{ route('reservations.edit', $reservation) }}" class="btn btn-warning btn-sm me-2">
+                            <a href="{{ route('admin.reservations.edit', $reservation) }}" class="btn btn-warning btn-sm me-2">
                                 <i class="fas fa-edit"></i> Edit
                             </a>
-                            <a href="{{ route('reservations.index') }}" class="btn btn-secondary btn-sm">
+                            <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary btn-sm">
                                 <i class="fas fa-arrow-left"></i> Back to List
                             </a>
                         </div>
@@ -159,15 +159,15 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <a href="{{ route('reservations.edit', $reservation) }}" class="btn btn-warning">
+                                        <a href="{{ route('admin.reservations.edit', $reservation) }}" class="btn btn-warning">
                                             <i class="fas fa-edit"></i> Edit Reservation
                                         </a>
-                                        <a href="{{ route('reservations.index') }}" class="btn btn-secondary ms-2">
+                                        <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary ms-2">
                                             <i class="fas fa-list"></i> All Reservations
                                         </a>
                                     </div>
                                     <div>
-                                        <form action="{{ route('reservations.destroy', $reservation) }}" 
+                                        <form action="{{ route('admin.reservations.destroy', $reservation) }}" 
                                               method="POST" 
                                               style="display: inline-block;"
                                               onsubmit="return confirm('Are you sure you want to delete this reservation? This action cannot be undone.')">

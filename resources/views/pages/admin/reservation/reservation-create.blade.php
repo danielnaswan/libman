@@ -8,12 +8,12 @@
                 <div class="card mb-4">
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                         <h6>Create New Reservation</h6>
-                        <a href="{{ route('reservations.index') }}" class="btn btn-secondary btn-sm">
+                        <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary btn-sm">
                             <i class="fas fa-arrow-left"></i> Back to List
                         </a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('reservations.store') }}" method="POST">
+                        <form action="{{ route('admin.reservations.store') }}" method="POST">
                             @csrf
                             
                             <div class="row">
@@ -82,7 +82,7 @@
                                         <button type="submit" class="btn btn-primary">
                                             <i class="fas fa-save"></i> Create Reservation
                                         </button>
-                                        <a href="{{ route('reservations.index') }}" class="btn btn-secondary ms-2">
+                                        <a href="{{ route('admin.reservations.index') }}" class="btn btn-secondary ms-2">
                                             Cancel
                                         </a>
                                     </div>

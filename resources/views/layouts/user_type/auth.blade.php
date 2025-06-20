@@ -2,7 +2,6 @@
 
 @section('auth')
 
-
     @if(\Request::is('static-sign-up')) 
         @include('layouts.navbars.guest.nav')
         @yield('content')
@@ -25,7 +24,11 @@
             </main>
 
         @elseif (\Request::is('profile'))  
-            @include('layouts.navbars.auth.sidebar')
+            @if(auth()->user()->user_type === 'admin')
+                @include('layouts.navbars.auth.sidebar')
+            @else
+                @include('layouts.navbars.member.sidebar')
+            @endif
             <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
                 @include('layouts.navbars.auth.nav')
                 @yield('content')
@@ -42,7 +45,11 @@
             @include('layouts.footers.auth.footer')
 
         @else
-            @include('layouts.navbars.auth.sidebar')
+            @if(auth()->user()->user_type === 'admin')
+                @include('layouts.navbars.auth.sidebar')
+            @else
+                @include('layouts.navbars.member.sidebar')
+            @endif
             <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg {{ (Request::is('rtl') ? 'overflow-hidden' : '') }}">
                 @include('layouts.navbars.auth.nav')
                 <div class="container-fluid py-4">
@@ -54,7 +61,5 @@
 
         @include('components.fixed-plugin')
     @endif
-
-    
 
 @endsection

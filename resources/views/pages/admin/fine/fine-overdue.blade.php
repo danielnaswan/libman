@@ -13,10 +13,10 @@
                                 <p class="text-sm mb-0">Fines that have passed their due date</p>
                             </div>
                             <div>
-                                <a href="{{ route('fines.due-soon') }}" class="btn btn-warning btn-sm me-2">
+                                <a href="{{ route('admin.fines.due-soon') }}" class="btn btn-warning btn-sm me-2">
                                     <i class="fas fa-clock"></i> Due Soon
                                 </a>
-                                <a href="{{ route('fines.index') }}" class="btn btn-secondary btn-sm">
+                                <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary btn-sm">
                                     <i class="fas fa-arrow-left"></i> All Fines
                                 </a>
                             </div>
@@ -73,10 +73,10 @@
                                             </td>
                                             <td class="align-middle text-center">
                                                 <div class="d-flex justify-content-center gap-2">
-                                                    <a href="{{ route('fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
+                                                    <a href="{{ route('admin.fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
-                                                    <a href="{{ route('fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
+                                                    <a href="{{ route('admin.fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                     <button class="text-success border-0 bg-transparent p-0" 

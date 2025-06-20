@@ -9,7 +9,7 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Members Management</h6>
-              <a href="{{ route('members.create') }}" class="btn btn-primary btn-sm">
+              <a href="{{ route('admin.members.create') }}" class="btn btn-primary btn-sm">
                 <i class="fa fa-plus"></i> Add New Member
               </a>
             </div>
@@ -62,13 +62,13 @@
                     </td>
                     <td class="align-middle text-center">
                       <div class="d-flex justify-content-center gap-2">
-                        <a href="{{ route('members.show', $member) }}" class="text-info me-2" data-toggle="tooltip" title="View">
+                        <a href="{{ route('admin.members.show', $member) }}" class="text-info me-2" data-toggle="tooltip" title="View">
                           <i class="fa fa-eye"></i>
                         </a>
-                        <a href="{{ route('members.edit', $member) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
+                        <a href="{{ route('admin.members.edit', $member) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <form action="{{ route('members.destroy', $member) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this member?')">
+                        <form action="{{ route('admin.members.destroy', $member) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this member?')">
                           @csrf
                           @method('DELETE')
                           <button type="submit" class="text-danger border-0 bg-transparent p-0" data-toggle="tooltip" title="Delete">
@@ -84,7 +84,7 @@
                       <div class="text-secondary">
                         <i class="fa fa-users fa-3x mb-3 opacity-6"></i>
                         <p class="mb-0">No members found</p>
-                        <a href="{{ route('members.create') }}" class="btn btn-primary btn-sm mt-2">Add Your First Member</a>
+                        <a href="{{ route('admin.members.create') }}" class="btn btn-primary btn-sm mt-2">Add Your First Member</a>
                       </div>
                     </td>
                   </tr>

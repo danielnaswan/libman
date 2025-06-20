@@ -105,13 +105,13 @@
             <div class="d-flex justify-content-between align-items-center">
               <h6>Fines Management</h6>
               <div>
-                <a href="{{ route('fines.overdue') }}" class="btn btn-danger btn-sm me-2">
+                <a href="{{ route('admin.fines.overdue') }}" class="btn btn-danger btn-sm me-2">
                     <i class="fas fa-exclamation-triangle"></i> Overdue
                 </a>
-                <a href="{{ route('fines.due-soon') }}" class="btn btn-warning btn-sm me-2">
+                <a href="{{ route('admin.fines.due-soon') }}" class="btn btn-warning btn-sm me-2">
                     <i class="fas fa-clock"></i> Due Soon
                 </a>
-                <a href="{{ route('fines.create') }}" class="btn btn-primary btn-sm">
+                <a href="{{ route('admin.fines.create') }}" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus"></i> Add Fine
                 </a>
               </div>
@@ -165,13 +165,13 @@
                     </td>
                     <td class="align-middle text-center">
                       <div class="d-flex justify-content-center gap-2">
-                        <a href="{{ route('fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
+                        <a href="{{ route('admin.fines.show', $fine) }}" class="text-info me-2" data-toggle="tooltip" title="View">
                           <i class="fa fa-eye"></i>
                         </a>
-                        <a href="{{ route('fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
+                        <a href="{{ route('admin.fines.edit', $fine) }}" class="text-warning me-2" data-toggle="tooltip" title="Edit">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <form action="{{ route('fines.destroy', $fine) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this fine?')">
+                        <form action="{{ route('admin.fines.destroy', $fine) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this fine?')">
                           @csrf
                           @method('DELETE')
                           <button type="submit" class="text-danger border-0 bg-transparent p-0" data-toggle="tooltip" title="Delete">
@@ -187,7 +187,7 @@
                       <div class="text-secondary">
                         <i class="fa fa-money-bill-wave fa-3x mb-3 opacity-6"></i>
                         <p class="mb-0">No fines found</p>
-                        <a href="{{ route('fines.create') }}" class="btn btn-primary btn-sm mt-2">Add Your First Fine</a>
+                        <a href="{{ route('admin.fines.create') }}" class="btn btn-primary btn-sm mt-2">Add Your First Fine</a>
                       </div>
                     </td>
                   </tr>

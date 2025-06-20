@@ -10,13 +10,13 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Edit Book: {{ $book->title }}</h6>
-              <a href="{{ route('books.index') }}" class="btn btn-secondary btn-sm">
+              <a href="{{ route('admin.books.index') }}" class="btn btn-secondary btn-sm">
                 <i class="fa fa-arrow-left"></i> Back to Books
               </a>
             </div>
           </div>
           <div class="card-body">
-            <form action="{{ route('books.update', $book) }}" method="POST">
+            <form action="{{ route('admin.books.update', $book) }}" method="POST">
               @csrf
               @method('PUT')
               
@@ -89,10 +89,10 @@
                     <button type="submit" class="btn btn-primary">
                       <i class="fa fa-save"></i> Update Book
                     </button>
-                    <a href="{{ route('books.show', $book) }}" class="btn btn-info ms-2">
+                    <a href="{{ route('admin.books.show', $book) }}" class="btn btn-info ms-2">
                       <i class="fa fa-eye"></i> View Book
                     </a>
-                    <a href="{{ route('books.index') }}" class="btn btn-secondary ms-2">
+                    <a href="{{ route('admin.books.index') }}" class="btn btn-secondary ms-2">
                       <i class="fa fa-times"></i> Cancel
                     </a>
                   </div>

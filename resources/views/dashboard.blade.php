@@ -205,7 +205,7 @@
           </div>
           <h5 class="mt-3">{{ $stats['overdue_reservations'] }}</h5>
           <p class="text-sm">Overdue Reservations</p>
-          <a href="{{ route('reservations.index') }}" class="btn btn-warning btn-sm">Manage</a>
+          <a href="{{ route('admin.reservations.index') }}" class="btn btn-warning btn-sm">Manage</a>
         </div>
       </div>
     </div>
@@ -217,7 +217,7 @@
           </div>
           <h5 class="mt-3">{{ $stats['overdue_fines'] }}</h5>
           <p class="text-sm">Overdue Fines</p>
-          <a href="{{ route('fines.overdue') }}" class="btn btn-danger btn-sm">View</a>
+          <a href="{{ route('admin.fines.overdue') }}" class="btn btn-danger btn-sm">View</a>
         </div>
       </div>
     </div>
@@ -229,7 +229,7 @@
           </div>
           <h5 class="mt-3">{{ $stats['active_fines'] }}</h5>
           <p class="text-sm">Active Fines</p>
-          <a href="{{ route('fines.index') }}" class="btn btn-success btn-sm">Manage</a>
+          <a href="{{ route('admin.fines.index') }}" class="btn btn-success btn-sm">Manage</a>
         </div>
       </div>
     </div>

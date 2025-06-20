@@ -9,16 +9,16 @@
                     <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                         <h6>Edit Fine #{{ $fine->id }}</h6>
                         <div>
-                            <a href="{{ route('fines.show', $fine) }}" class="btn btn-info btn-sm me-2">
+                            <a href="{{ route('admin.fines.show', $fine) }}" class="btn btn-info btn-sm me-2">
                                 <i class="fas fa-eye"></i> View
                             </a>
-                            <a href="{{ route('fines.index') }}" class="btn btn-secondary btn-sm">
+                            <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary btn-sm">
                                 <i class="fas fa-arrow-left"></i> Back to List
                             </a>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('fines.update', $fine) }}" method="POST">
+                        <form action="{{ route('admin.fines.update', $fine) }}" method="POST">
                             @csrf
                             @method('PUT')
                             
@@ -186,10 +186,10 @@
                                         <button type="submit" class="btn btn-primary">
                                             <i class="fas fa-save"></i> Update Fine
                                         </button>
-                                        <a href="{{ route('fines.show', $fine) }}" class="btn btn-info ms-2">
+                                        <a href="{{ route('admin.fines.show', $fine) }}" class="btn btn-info ms-2">
                                             <i class="fas fa-eye"></i> View
                                         </a>
-                                        <a href="{{ route('fines.index') }}" class="btn btn-secondary ms-2">
+                                        <a href="{{ route('admin.fines.index') }}" class="btn btn-secondary ms-2">
                                             Cancel
                                         </a>
                                     </div>

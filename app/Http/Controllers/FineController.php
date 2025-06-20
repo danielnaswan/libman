@@ -58,7 +58,7 @@ class FineController extends Controller
 
         Fine::create($request->all());
 
-        return redirect()->route('fines.index')
+        return redirect()->route('admin.fines.index')
             ->with('success', 'Fine created successfully.');
     }
 
@@ -97,7 +97,7 @@ class FineController extends Controller
 
         $fine->update($request->all());
 
-        return redirect()->route('fines.index')
+        return redirect()->route('admin.fines.index')
             ->with('success', 'Fine updated successfully.');
     }
 
@@ -108,7 +108,7 @@ class FineController extends Controller
     {
         $fine->delete();
 
-        return redirect()->route('fines.index')
+        return redirect()->route('admin.fines.index')
             ->with('success', 'Fine deleted successfully.');
     }
 

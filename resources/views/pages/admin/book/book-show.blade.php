@@ -11,10 +11,10 @@
             <div class="d-flex justify-content-between align-items-center">
               <h6>Book Details</h6>
               <div>
-                <a href="{{ route('books.edit', $book) }}" class="btn btn-primary btn-sm me-2">
+                <a href="{{ route('admin.books.edit', $book) }}" class="btn btn-primary btn-sm me-2">
                   <i class="fa fa-edit"></i> Edit Book
                 </a>
-                <a href="{{ route('books.index') }}" class="btn btn-secondary btn-sm">
+                <a href="{{ route('admin.books.index') }}" class="btn btn-secondary btn-sm">
                   <i class="fa fa-arrow-left"></i> Back to Books
                 </a>
               </div>
@@ -100,10 +100,10 @@
                     <hr class="my-3">
                     
                     <div class="d-flex justify-content-between">
-                      <a href="{{ route('books.edit', $book) }}" class="btn btn-outline-primary btn-sm">
+                      <a href="{{ route('admin.books.edit', $book) }}" class="btn btn-outline-primary btn-sm">
                         <i class="fa fa-edit"></i> Edit
                       </a>
-                      <form action="{{ route('books.destroy', $book) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this book?')">
+                      <form action="{{ route('admin.books.destroy', $book) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this book?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-outline-danger btn-sm">

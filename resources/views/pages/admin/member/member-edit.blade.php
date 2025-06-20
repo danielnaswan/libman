@@ -10,13 +10,13 @@
           <div class="card-header pb-0">
             <div class="d-flex justify-content-between align-items-center">
               <h6>Edit Member: {{ $member->user->name }}</h6>
-              <a href="{{ route('members.index') }}" class="btn btn-secondary btn-sm">
+              <a href="{{ route('admin.members.index') }}" class="btn btn-secondary btn-sm">
                 <i class="fa fa-arrow-left"></i> Back to Members
               </a>
             </div>
           </div>
           <div class="card-body">
-            <form action="{{ route('members.update', $member) }}" method="POST">
+            <form action="{{ route('admin.members.update', $member) }}" method="POST">
               @csrf
               @method('PUT')
               
@@ -98,10 +98,10 @@
                     <button type="submit" class="btn btn-primary">
                       <i class="fa fa-save"></i> Update Member
                     </button>
-                    <a href="{{ route('members.show', $member) }}" class="btn btn-info ms-2">
+                    <a href="{{ route('admin.members.show', $member) }}" class="btn btn-info ms-2">
                       <i class="fa fa-eye"></i> View Member
                     </a>
-                    <a href="{{ route('members.index') }}" class="btn btn-secondary ms-2">
+                    <a href="{{ route('admin.members.index') }}" class="btn btn-secondary ms-2">
                       <i class="fa fa-times"></i> Cancel
                     </a>
                   </div>
